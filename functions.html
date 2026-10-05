@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Functions</title>
+</head>
+<body>
+    <button onclick="runDemo()">Run Code</button>
+
+    <pre id="outputBox"></pre>
+
+    <script>
+    function runDemo() {
+
+        const output = [];
+
+        function sayHi() {
+            output.push("Hi");
+            console.log("Hi");
+        }
+
+        sayHi();
+
+        const sayHiArrow = () => {
+            output.push("Hi from Arrow");
+            console.log("Hi from Arrow");
+        };
+
+        sayHiArrow();
+
+        function greet(name) {
+            output.push("Hello " + name);
+            console.log("Hello " + name);
+        }
+
+        greet("Alex");
+
+        function add(a, b) {
+            return a + b;
+        }
+
+        let sum = add(5, 7);
+
+        output.push("ผลรวม 5 + 7 = " + sum);
+        console.log("ผลรวม:", sum);
+
+        document.getElementById("outputBox").textContent =
+            output.join("\n");
+    }
+    </script>
+
+</body>
+</html>
